@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-image: url("large-27.jpg");
+}
+</style>
+<body>
+		<form method="post" onSubmit="return Formco();" >
+<div style="width: 400px;">
+</div>
+<div style="padding-bottom: 18px;font-size : 24px;color: white;">Table Reservation</div>
+<div style="padding-bottom: 18px;font-size : 18px;color: white;">We would be glad to reserve a table for you at our restaurant!</div>
+<div style="padding-bottom: 18px;color: white;" >Name<span style="color: red;"> *</span><br/>
+<input type="text" id="3" name="3" style="width : 400px;" >
+</div>
+<div style="padding-bottom: 18px;color: white;">Phone<br/>
+<input type="text" id="4" name="4" style="width : 400px;" >
+</div>
+<div style="padding-bottom: 18px;color: white;">Email<br/>
+<input type="text" id="5" name="5" style="width : 400px;" >
+</div>
+<div style="padding-bottom: 18px;color: white;">Date<span style="color: red;"> *</span><br/>
+<input type="text" id="6" name="6" style="width : 250px;" >
+</div>
+<div style="padding-bottom: 18px;color: white;">Time<span style="color: red;"> *</span><br/>
+<input type="time">
+</div>
+<div style="padding-bottom: 18px;color: white;">Number of Attendees<span style="color: red;"> *</span><br/>
+<select id="8" name="8" style="width : 250px;" class="form-control"><option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>10+ (Specify in Comments)</option>
+</select>
+</div>
+<div style="padding-bottom: 18px;color: white;">Comments / Additional Requests<br/>
+<textarea id="9" style="width : 400px;" rows="6" ></textarea>
+</div>
+<button onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+    alert("Are you sure your details are right!");
+}
+function Formco() {
+if (Empty(document.getElementById('3').value)) {
+alert('Name is required!');
+return false;
+}
+if (Empty(document.getElementById('5').value)) {
+alert('Email is required!');
+return false;
+}
+if (Empty(document.getElementById('6').value)) {
+alert('Date is required!');
+return false;
+}
+if (Empty(document.getElementById('7').value)) {
+alert('Time is required!');
+return false;
+}
+return true;
+}
+function Empty(str) { return (str.length === 0 ); }
+</script>
+</form>
+
+</body>
+</head>
+</html>

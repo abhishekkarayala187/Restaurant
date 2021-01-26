@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Please give your valuable feedback</title>
+	<style>
+		body {
+    background-image: url("mixing-desk-351478_1920.jpg");
+}
+</style>
+<h3 style="color: white;">Feedback</h3>
+<body>
+<form method="get" onSubmit="return Form();">
+<div style="padding-bottom: 18px;color: white;" >Name<span style="color: red;"> *</span><br/>
+<input type="text" id="3" name="3" style="width : 400px;" >
+<div style="padding-bottom: 18px;color: white;" >Email<span style="color: red;"> *</span><br/>
+<input type="text" id="4" name="4" style="width : 400px;" >
+<p style="color: white;">What was your experience in the restaurant??</p>
+<div style="color: white;">
+<input  type="radio" name="experience" value="bad">Bad
+<input type="radio" name="experience" value="avarege">Avarege
+<input type="radio" name="experience" value="good">Good
+<input type="radio" name="experience" value="excellent">Excellent<br><br>
+</div>
+<p style="color: white;">
+what was the food quality??</p>
+<div style="color: white;">
+<input  type="radio" name="expr" value="bad">Bad
+<input type="radio" name="expr" value="avarege">Avarege
+<input type="radio" name="expr" value="good">Good
+<input type="radio" name="expr" value="excellent">Excellent
+<br>
+</div>
+<h4 style="color: white;">Your comments are valuable for us... </h4>
+<p style="color: white;">Comments:</p>
+<textarea rows="10" cols="50"></textarea><br><br>
+<input type="button" name="b1" value="ok">
+<input type="submit">
+<input type="reset">
+<script>
+function Form() {
+if (Empty(document.getElementById('3').value)) {
+alert('Name is required!');
+return false;
+}
+if (Empty(document.getElementById('4').value)) {
+alert('Email is required!');
+return false;
+}
+return true;
+}
+function Empty(str) { return (str.length === 0 ); }
+</script>
+</form>
+</body>
+</head>
+</html>
